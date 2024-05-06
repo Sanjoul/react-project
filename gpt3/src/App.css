@@ -11,18 +11,46 @@ body {
 
 a {
   color: unset;
+  text-decoration: none;
 }
 
-.gradient_bg {
+.gradient__bg {
+  background: -moz-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 25%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 25%
+  );
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 25%
+  );
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 25%
+  );
+
   /* global 92%+ browsers support */
   background: radial-gradient(
     circle at 3% 25%,
     rgba(0, 40, 83, 1) 0%,
-    rgba(4, 12, 24, 1) 100%
+    rgba(4, 12, 24, 1) 25%
   );
 }
 
-.gradient_text {
+.gradient__text {
   background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
@@ -32,8 +60,9 @@ a {
 .section__padding {
   padding: 4rem 6rem;
 }
+
 .section__margin {
-  padding: 4rem 6rem;
+  margin: 4rem 6rem;
 }
 
 .scale-up-center {
@@ -52,6 +81,7 @@ a {
     transform: scale(1);
   }
 }
+
 @keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
@@ -67,14 +97,17 @@ a {
   .section__padding {
     padding: 4rem;
   }
+
   .section__margin {
     margin: 4rem;
   }
 }
+
 @media screen and (max-width: 550px) {
   .section__padding {
     padding: 4rem 2rem;
   }
+
   .section__margin {
     margin: 4rem 2rem;
   }
