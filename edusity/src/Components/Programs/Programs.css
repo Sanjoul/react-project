@@ -12,8 +12,11 @@
 }
 
 .program {
+  height: 300px;
+  background: yellow;
   flex-basis: 31%;
   position: relative;
+  overflow: hidden;
 }
 
 .caption {
